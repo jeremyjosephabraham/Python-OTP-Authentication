@@ -2,11 +2,12 @@
     objname : name
     objemail : email
     objphone : phone
+    objotp   : otp
 
     GridLayout:
         cols:1
-        size : root.width - 200 , root.height - 200
-        pos: 100 , 100
+        size : root.width , root.height
+
 
         GridLayout:
             cols:2
@@ -36,6 +37,27 @@
                 id: phone
                 multiline : False
 
+
+
+
+
+
+
         Button:
+
             text: "Generate OTP"
-            on_press : root.btn()
+            on_press : root.sendbtn()
+
+
+        Label:
+            text: " Enter OTP "
+
+        TextInput:
+            id: otp
+            multiline : False
+
+        Button:
+            text: "Authenticate"
+            on_press : root.authbtn()
+
+
