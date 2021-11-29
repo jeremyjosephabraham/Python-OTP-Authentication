@@ -63,7 +63,7 @@ class MyGridLayout(GridLayout):
 
 class MyOTPApp(App):
     def build(self):
-        Window.clearcolor = (0.902, 0.902, 0.98, 1)
+        Window.clearcolor = (0.804, 0.361, 0.361,1)
         return MyGridLayout()
 
 if __name__ == '__main__' :
