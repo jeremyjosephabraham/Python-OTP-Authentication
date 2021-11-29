@@ -21,20 +21,13 @@
         cols:1
         size : root.width , root.height
 
-
-
-
-
-
         GridLayout:
-            cols:2
 
+            cols:2
 
             Label:
 
-
                 text : "Name: "
-
 
             TextInput:
 
@@ -42,7 +35,6 @@
                 multiline : False
 
             Label:
-
 
                 text: " Email : "
 
@@ -57,15 +49,8 @@
 
             TextInput:
 
-
                 id: phone
                 multiline : False
-
-
-
-
-
-
 
         Button:
             id : sendbtn
@@ -75,9 +60,6 @@
 
 
         GridLayout:
-
-
-
 
             cols : 2
             Label:
@@ -99,6 +81,24 @@
 
             text: "Authenticate" if authbtn.state == "normal" else "Authenticating"
             on_press : root.authbtn()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
