@@ -1,12 +1,29 @@
-<MyGridLayout>
+<Button>:
+
+    background_color :  1, 0.98, 0.804,0.4
+<Label>:
+    color : 1,0,0,0.5
+
+
+<MyGridLayout>:
     objname : name
     objemail : email
     objphone : phone
     objotp   : otp
 
+
+
+
+
     GridLayout:
+
+
         cols:1
         size : root.width , root.height
+
+
+
+
 
 
         GridLayout:
@@ -15,25 +32,32 @@
 
             Label:
 
+
                 text : "Name: "
 
 
             TextInput:
+
                 id : name
                 multiline : False
 
             Label:
 
-                text: " Email "
+
+                text: " Email : "
 
             TextInput:
+
                 id: email
                 multiline : False
 
             Label:
-                text: " Phone Number "
+
+                text: " Phone Number :"
 
             TextInput:
+
+
                 id: phone
                 multiline : False
 
@@ -44,20 +68,37 @@
 
 
         Button:
-
-            text: "Generate OTP"
+            id : sendbtn
+            size_hint :  .1 , 0.3
+            text: "Generate OTP" if sendbtn.state == "normal" else "Generating OTP"
             on_press : root.sendbtn()
 
 
-        Label:
-            text: " Enter OTP "
+        GridLayout:
 
-        TextInput:
-            id: otp
-            multiline : False
+
+
+
+            cols : 2
+            Label:
+                size_hint_y: 0.1
+                text: " Enter OTP :"
+
+            TextInput:
+
+                height : 40
+                pos_hint: {"y" : 1 , "top" : 1}
+                id: otp
+                multiline : False
+
 
         Button:
-            text: "Authenticate"
+            id : authbtn
+            size_hint : 0.1,1
+
+
+            text: "Authenticate" if authbtn.state == "normal" else "Authenticating"
             on_press : root.authbtn()
+
 
 
