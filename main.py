@@ -1,5 +1,6 @@
 import random
 import smtplib
+import kivy_deps
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
@@ -48,12 +49,13 @@ class MyGridLayout(GridLayout):
 
     def authbtn(self):
         if (self.objotp.text == self.authotp):
+
             self.objotp.text = ""
             self.objname.text = ""
             self.objemail.text = ""
             self.objphone.text = ""
             print("\nUser Authorized ")
-        elif (self.authotp == "0"):
+        elif (self.authotp == ""):
             print("Generate the OTP first")
         else :
             print("OTP is incorrect")
@@ -66,7 +68,7 @@ class MyOTPApp(App):
         Window.clearcolor = (0.804, 0.361, 0.361,1)
         return MyGridLayout()
 
-if __name__ == '__main__' :
+if __name__ == "__main__" :
     MyOTPApp=MyOTPApp()
     MyOTPApp.run()
 
